@@ -2,7 +2,7 @@
 
 [Back to the class](../README.md) · [Examples](../examples/) · [Style guide](style-guide.md)
 
-Minute by minute for a 50 minute slot. Everything on screen is the
+Minute by minute for a one hour slot. Everything on screen is the
 [README](../README.md); scroll it, do not switch windows more than you have
 to. Times are when each segment starts.
 
@@ -37,7 +37,7 @@ Goal: the room sees a decision API answer before hearing a definition.
 
 If live: ask the room for a job title. Take one that is ambiguous on purpose.
 
-## 0:04 What a decision API is (7 min)
+## 0:04 What a decision model is (9 min)
 
 Goal: three ideas stick. Decide, not generate. Probability is the product.
 Confidence is not probability.
@@ -64,7 +64,7 @@ Confidence is not probability.
 - One sentence on what not to use it for: anything where you need the
   argument, not the answer.
 
-## 0:11 The landscape (7 min)
+## 0:13 The landscape (10 min)
 
 Goal: the room understands this is a category that formed in eight weeks,
 and that the schemas are converging.
@@ -74,7 +74,8 @@ and that the schemas are converging.
 - Read across the endpoint row. Microsoft's path ends in `/v1/systemone`,
   the same as Jev's, with the same `state` and `questions`. Let people react.
   Be precise: neither Microsoft page states a relationship with TypeSafe;
-  the announcement does cite a leaderboard called JevBench.
+  the announcement does cite an accuracy leaderboard called JevBench, which
+  is not the games board you are about to show.
 - In this room: Microsoft says in its own post that Decision-1 was
   post-trained from Qwen3.5-9B and will be rebased on MAI and OpenAI models.
   Quote it rather than paraphrase it.
@@ -92,7 +93,29 @@ and that the schemas are converging.
 - Do not get drawn on the vendors we did not verify. Say they are reported
   and that we did not confirm them.
 
-## 0:18 The real problem (5 min)
+Last three minutes of the segment: the leaderboard and local models.
+
+- Open jevbench.dev/leaderboard live if the network allows; it has video of
+  a model winning a StarCraft II mission. "A benchmark you can watch. A win
+  only counts when the game says so."
+- Read the two top rows. Jev 1.13: 21 wins from 25. LocalJev: 2 from 2. Ask
+  the room which is better, then show the time column: 391 milliseconds
+  against about 30 seconds a decision, and two runs is marked provisional.
+- The point to land: "LocalJev answers the same request at the same path.
+  You change one setting and your code talks to a model in your own
+  building."
+- Then the three-ways diagram. Ask for it, read it, train it. "LocalJev asks
+  a language model to write its probabilities down. Its own README says so,
+  and says to check calibration yourself. OpenJev reads the model's real
+  scores. jeff and Laya train a small model to do nothing else."
+- The line to leave: **is the probability read, trained, or written?**
+- Tie it back: our client takes its address from a setting. This example
+  could run with nothing leaving the building. We have not tried it, and the
+  verdict experiment would have to be run again before trusting it.
+- If asked "is this the JevBench Microsoft cites?": no. Same name, different
+  site. This one says it is independent.
+
+## 0:23 The real problem (5 min)
 
 Goal: a room of engineers understands why a sentence of text is worth money.
 
@@ -107,7 +130,7 @@ Goal: a room of engineers understands why a sentence of text is worth money.
 - The question: "Given only the words, how sure are you the code is right?"
 - Say once: this is a simplification for the class, not compliance advice.
 
-## 0:23 Code tour (12 min)
+## 0:28 Code tour (13 min)
 
 Goal: follow one line from a database row to a score. Two minutes a link.
 
@@ -136,7 +159,7 @@ If short on time: 1, 2, 3, 5.
 Show the line-detail screenshot here: "sent to the model" beside "kept here".
 It is the code tour as a user sees it.
 
-## 0:35 Results (5 min)
+## 0:41 Results (5 min)
 
 Goal: the scale and the cost land, and the caveat lands harder.
 
@@ -150,7 +173,7 @@ Goal: the scale and the cost land, and the caveat lands harder.
 - Then stop and say it plainly: "Nobody has checked any of these. Not one.
   Until someone does, this is a ranking, not a result."
 
-## 0:40 What went wrong (6 min)
+## 0:46 What went wrong (8 min)
 
 Goal: this is the part people will repeat to colleagues.
 
@@ -192,7 +215,7 @@ columns is not an allowlist of content.**
 Timing: this segment now carries more. If you are over, drop link 4 or link 6
 from the code tour, not the injection table.
 
-## 0:46 Discussion (4 min)
+## 0:54 Discussion (6 min)
 
 Pick two from README section 9. The two that reliably start a conversation:
 
@@ -227,6 +250,11 @@ means something."
   request schema and endpoint path match, and Microsoft's post cites
   JevBench. Neither Microsoft page states a relationship. Do not speculate
   past that.
+- **"Can I run this without sending data anywhere?"** Yes. Several open
+  projects serve the same request locally: LocalJev, OpenJev, jeff, Laya.
+  They differ in how the probability is made, so the first thing to test is
+  calibration on your own examples. Expect a small trained model to be fast
+  and weaker on reasoning, and a "written" probability to be slow.
 - **"Could you swap vendors?"** The adapter is small: one field name and the
   auth header, and through OpenRouter's alpha endpoint it is only the `model`
   field. The work is re-validating thresholds, because calibration is per

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-labelledby="t d">
+  <title id="t">Three ways a local model produces the probability</title>
+  <desc id="d">First, ask a language model to write the probabilities as text: easiest, works with any model, and the number is self-reported. Second, read the model's own scores for each option's tokens in one pass: a real measurement, needs access to the logits. Third, train a small model with a decision head: fastest and smallest, and weakest on questions that need reasoning.</desc>
+  <rect width="1200" height="400" rx="24" fill="#FAF8F3"/>
+  <rect x="0.5" y="0.5" width="1199" height="399" rx="24" fill="none" stroke="#E1DBC6"/>
+
+  <text x="48" y="62" font-family="'Segoe Serif',Georgia,'Times New Roman',serif" font-size="30" fill="#191919">Same endpoint, three ways to make the number</text>
+  <text x="48" y="92" font-family="'Segoe Sans','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="16" fill="#5D524B">Local servers that answer POST /v1/systemone do not all mean the same thing by "probability".</text>
+
+  <g font-family="'Segoe Sans','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif">
+    <!-- 1 -->
+    <rect x="40" y="122" width="360" height="244" rx="18" fill="#FFFFFF" stroke="#E1DBC6"/>
+    <text x="68" y="160" font-size="14" font-weight="600" letter-spacing="2" fill="#A76F3E">ASK FOR IT</text>
+    <text x="68" y="196" font-family="'Segoe Serif',Georgia,'Times New Roman',serif" font-size="26" fill="#191919">The model writes it</text>
+    <text x="68" y="230" font-size="16" fill="#4A413B">Prompt a language model to reply</text>
+    <text x="68" y="252" font-size="16" fill="#4A413B">with probabilities as JSON, then</text>
+    <text x="68" y="274" font-size="16" fill="#4A413B">make them add up to one.</text>
+    <text x="68" y="312" font-size="15" fill="#5D524B">Works with any model. The number</text>
+    <text x="68" y="333" font-size="15" fill="#5D524B">is self-reported, and slow to get.</text>
+    <text x="68" y="356" font-size="14" font-weight="600" fill="#191919">LocalJev</text>
+
+    <!-- 2 -->
+    <rect x="420" y="122" width="360" height="244" rx="18" fill="#F7ECD9" stroke="#A76F3E" stroke-width="1.5"/>
+    <text x="448" y="160" font-size="14" font-weight="600" letter-spacing="2" fill="#A76F3E">READ IT</text>
+    <text x="448" y="196" font-family="'Segoe Serif',Georgia,'Times New Roman',serif" font-size="26" fill="#191919">Measured from logits</text>
+    <text x="448" y="230" font-size="16" fill="#4A413B">One pass, nothing generated. Read</text>
+    <text x="448" y="252" font-size="16" fill="#4A413B">the model's own score for each</text>
+    <text x="448" y="274" font-size="16" fill="#4A413B">option and normalize.</text>
+    <text x="448" y="312" font-size="15" fill="#5D524B">A real measurement. Needs a runtime</text>
+    <text x="448" y="333" font-size="15" fill="#5D524B">that exposes logits, and a GPU.</text>
+    <text x="448" y="356" font-size="14" font-weight="600" fill="#191919">OpenJev, SemIf</text>
+
+    <!-- 3 -->
+    <rect x="800" y="122" width="360" height="244" rx="18" fill="#FFFFFF" stroke="#E1DBC6"/>
+    <text x="828" y="160" font-size="14" font-weight="600" letter-spacing="2" fill="#A76F3E">TRAIN IT</text>
+    <text x="828" y="196" font-family="'Segoe Serif',Georgia,'Times New Roman',serif" font-size="26" fill="#191919">A decision head</text>
+    <text x="828" y="230" font-size="16" fill="#4A413B">A small encoder with a trained</text>
+    <text x="828" y="252" font-size="16" fill="#4A413B">head that scores your options</text>
+    <text x="828" y="274" font-size="16" fill="#4A413B">directly, then temperature scaling.</text>
+    <text x="828" y="312" font-size="15" fill="#5D524B">Smallest and fastest. Weakest where</text>
+    <text x="828" y="333" font-size="15" fill="#5D524B">the question needs reasoning.</text>
+    <text x="828" y="356" font-size="14" font-weight="600" fill="#191919">jeff, Laya, NanoJev</text>
+  </g>
+</svg>

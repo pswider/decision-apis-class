@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="images/banner.svg" alt="Decision APIs in practice. A 45 to 50 minute class on Jev, Microsoft-Decision-1 and Gemini Decision 1, and what happened when one of them scored a year of Medicare cost report coding." width="100%">
+  <img src="images/banner.svg" alt="Decision APIs in practice. A one hour masterclass on decision models: Jev, Microsoft-Decision-1 and Gemini Decision 1, and what happened when one of them scored a year of Medicare cost report coding." width="100%">
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Length-45%20to%2050%20min-A76F3E?style=flat-square&labelColor=191919" alt="Length: 45 to 50 minutes">
+  <img src="https://img.shields.io/badge/Length-One%20hour-A76F3E?style=flat-square&labelColor=191919" alt="Length: one hour">
   <img src="https://img.shields.io/badge/Level-Technical-A76F3E?style=flat-square&labelColor=191919" alt="Level: technical">
   <img src="https://img.shields.io/badge/APIs%20compared-3-A76F3E?style=flat-square&labelColor=191919" alt="APIs compared: 3">
   <img src="https://img.shields.io/badge/Code%20links-15-A76F3E?style=flat-square&labelColor=191919" alt="Code links: 15">
-  <img src="https://img.shields.io/badge/Facts%20checked-November%2011%2C%202026-A76F3E?style=flat-square&labelColor=191919" alt="Facts checked November 11, 2026">
+  <img src="https://img.shields.io/badge/Facts%20checked-November%2012%2C%202026-A76F3E?style=flat-square&labelColor=191919" alt="Facts checked November 12, 2026">
 </p>
 
 <p align="center">
@@ -76,15 +76,16 @@ coded to the right regulatory class.
 | Time | Min | Segment | What is on screen |
 | --- | --- | --- | --- |
 | 0:00 | 4 | **Hook.** Three phrases, three answers, about 100 ms each | [Try it](#the-hook-three-phrases) screenshots, or the live page |
-| 0:04 | 7 | **What a decision API is.** Decide, not generate | [Section 2](#2-what-a-decision-api-is) |
-| 0:11 | 7 | **The landscape.** Jev, Microsoft-Decision-1, Gemini Decision 1 | [Section 3](#3-three-decision-apis-side-by-side) |
-| 0:18 | 5 | **The real problem.** Medicare, physician time, and why text matters | [Section 4](#4-the-real-problem) |
-| 0:23 | 12 | **Code tour.** Six links, from database row to score | [Section 6](#6-code-tour-the-links) |
-| 0:35 | 5 | **Results.** 8,324 lines for three cents | [Section 7](#7-what-happened-on-real-data) |
-| 0:40 | 6 | **What went wrong.** Four privacy catches and one wrong assumption | [Section 8](#8-what-went-wrong-and-what-it-taught) |
-| 0:46 | 4 | **Discussion and questions** | [Section 9](#9-questions-for-the-room) |
+| 0:04 | 9 | **What a decision model is.** Decide, not generate, and what the job is | [Section 2](#2-what-a-decision-api-is) |
+| 0:13 | 10 | **The landscape.** Three APIs, a leaderboard you can watch, and models you can run yourself | [Section 3](#3-three-decision-apis-side-by-side) |
+| 0:23 | 5 | **The real problem.** Medicare, physician time, and why text matters | [Section 4](#4-the-real-problem) |
+| 0:28 | 13 | **Code tour.** Six links, from database row to score | [Section 6](#6-code-tour-the-links) |
+| 0:41 | 5 | **Results.** 8,324 lines for three cents | [Section 7](#7-what-happened-on-real-data) |
+| 0:46 | 8 | **What went wrong.** Privacy catches, a wrong assumption, and a score that can be steered | [Section 8](#8-what-went-wrong-and-what-it-taught) |
+| 0:54 | 6 | **Discussion and questions** | [Section 9](#9-questions-for-the-room) |
 
-Total 50 minutes. To land at 45, shorten the code tour to links 1, 2, 3 and 5.
+Total 60 minutes. If you are running long, shorten the code tour to links 1,
+2, 3 and 5.
 
 ### The hook: three phrases
 
@@ -243,9 +244,9 @@ Things worth saying out loud:
 - **The schema is converging.** Microsoft's endpoint path ends in
   `/v1/systemone` and takes `state` and `questions`, the same shape as Jev's.
   Google renamed `state` to `input` and kept the rest. Code written against
-  one is a small adapter away from the others. Microsoft's post cites a
-  leaderboard called JevBench; neither Microsoft page states a relationship
-  with TypeSafe.
+  one is a small adapter away from the others. Microsoft's post cites an
+  accuracy leaderboard called JevBench (not the games board described
+  below); neither Microsoft page states a relationship with TypeSafe.
 - **Microsoft says what it is built on.** The announcement says the model was
   post-trained from Qwen3.5-9B and will be rebased on Microsoft AI and OpenAI
   models. A small base model is a large part of why these calls are fast and
@@ -296,6 +297,97 @@ The pattern: very good for the price, not always as good as a specialist or a
 large model, and steerable by the text it reads. We did not verify these
 reports ourselves. We did run two small checks of our own, in
 [section 8](#two-checks-we-ran-for-this-class).
+
+### A leaderboard you can watch
+
+[JevBench](https://jevbench.dev/leaderboard) tests decision models a
+different way. It puts one in charge of a real game, StarCraft II or
+Minecraft, and lets it make hundreds of decisions in a row. A run counts only
+when the game's own objective confirms the win, every run is published, win
+or lose, and the video is attached.
+
+The StarCraft II board as it stood on November 12, 2026 (last updated
+September 25: 105 runs, 12,901 decisions, 24 verified wins):
+
+| Rank | Model | What it is | Record | Median time per decision |
+| --- | --- | --- | --- | --- |
+| 1 | TypeSafe Jev 1.13 | The hosted API | 21 wins, 4 losses (84%; 95% range 65 to 94) | 391 ms |
+| 2 | LocalJev | Self-hosted, on Qwen3.5 4B | 2 wins, 0 losses. Provisional | About 30 seconds |
+| 3 | OpenJev | Open source | 0 wins, 9 losses | |
+| 4 | jeff | Self-hosted, GLiFormer | 0 wins, 1 loss. Provisional | |
+
+Queued and not yet scored: Laya, NanoJev, Laya-MLX, OpenJev Browser and djev.
+
+How to read it without fooling yourself:
+
+- **Two runs is not a ranking.** The board marks anything under five runs
+  provisional. LocalJev's 100 percent is two games on the older version of
+  the bench.
+- **Look at the time column.** LocalJev took about 30 seconds a decision on
+  those runs, against 391 milliseconds. It is a different kind of thing, as
+  the next section explains.
+- **The model does not play alone.** Runs pair the decision model with a
+  "guide" language model. Cost per win includes both.
+- **There are two JevBenches.** This site says it is independent and not
+  affiliated with other benchmarks that use the name. The JevBench that
+  Microsoft's announcement cites links to a different site, an accuracy
+  leaderboard. Do not mix their numbers.
+
+Why it earns a minute in this class: it tests what agents actually do, many
+decisions in sequence with a real outcome, and the harness is open source. It
+talks to every model through the same Jev request format, which leads to the
+more interesting point.
+
+### Models you can run yourself
+
+The Jev request format, `POST /v1/systemone` with `state` and `questions`,
+has become a shared standard in two months. Several open projects serve it, so
+code written against the hosted API can be pointed at a machine in your own
+building by changing one setting, the base URL. For anyone whose data cannot
+leave, that changes the conversation.
+
+They do not all produce the number the same way, and that is the part to
+teach.
+
+<p align="center">
+  <img src="images/three-ways.svg" alt="Three ways a local server makes the probability. Ask for it: a language model writes the probabilities as text. Read it: the server reads the model's own scores for each option. Train it: a small encoder with a trained decision head." width="100%">
+</p>
+
+| Project | How the probability is made | Serves `/v1/systemone` | License | Worth knowing |
+| --- | --- | --- | --- | --- |
+| [LocalJev](https://github.com/githubnext/localjev) (GitHub Next) | Asks a local language model to **write** the probabilities as JSON, retries bad output, normalizes | Yes | MIT | Its README says the probabilities are self-reported, not read from the model's logits, and to check calibration on your own workload. Three commits, version 0.2 |
+| [OpenJev](https://github.com/razorback16/openjev) | **Reads** the scores of the option tokens in one pass, nothing generated | Yes | Apache-2.0 | Needs a 24 GB NVIDIA card or Apple Silicon. Rejects pinned names such as `jev-1.13.0` |
+| [SemIf](https://github.com/TheoLeeCJ/SemIf-OpenJev) (formerly called OpenJev) | **Reads** the option scores from a frozen Qwen3.5 4B | Not stated | MIT | Has a demo that runs in the browser. Its own test: 0.813 balanced accuracy against 0.883 published for Jev |
+| [jeff](https://github.com/logan-markewich/jeff) | A **trained** classification head on a 400M encoder | Yes | MIT | Its README says it is less accurate than Jev on reasoning-heavy tasks |
+| [Laya](https://github.com/NandhaKishorM/laya) | **Trained** decision heads on small encoders, one pass | Yes, with stated differences | Apache-2.0 | `pip install laya`. Runs on a CPU. [An Apple Silicon port](https://github.com/mizorewww/laya-mlx) exists |
+| [NanoJev](https://github.com/TianyuCodings/NanoJev) | A fine-tuned 0.6B model with **trained** heads | No, its own endpoint | MIT | Ships the training recipe |
+
+Every accuracy and speed figure above is the project's own. We read the
+READMEs and confirmed the repositories; we did not run any of them. Which
+project the board's "OpenJev" and "OpenJev Browser" rows refer to could not be
+confirmed.
+
+**So what is LocalJev?** It is the simplest of the three approaches: a small
+server that takes a Jev request, asks whatever local model you have to answer
+with probabilities written out as JSON, and reshapes the reply into a Jev
+response. That makes it the easiest to run and the most flexible. It also
+makes its number exactly the thing section 2 warned about: "how sure are
+you?" as one more thing the model writes. The JevBench entry ran it on a 4B
+Qwen model through Ollama, with a patched engine, at about 30 seconds a
+decision.
+
+> [!TIP]
+> When someone says "we run a decision model locally", ask one question:
+> **is the probability read, trained, or written?** The endpoint looks the
+> same in all three cases.
+
+**For the example in this class**, the client already takes its address from
+a setting (`TYPESAFE_BASE_URL`), so pointing Coding Review at a local server
+is a configuration change, and no text would leave the building at all. We
+have not tried it. Two things would need checking first: the model name the
+server accepts, since some reject pinned versions, and above all whether its
+probabilities mean anything on these lines, which is the same verdict
+experiment as before.
 
 ---
 
@@ -698,6 +790,10 @@ three numbers each: how often right, how long, how much.
    scored. What would you build before trusting a "confirmed"?
 9. Small, frequent and easy to undo. Name one decision in your product that
    passes that test, and one that looks like it does and does not.
+10. A local server answers the same request as the hosted API. Its
+    probability might be read from the model, trained into it, or written by
+    it. How would you tell which, from the outside, with fifty labelled
+    examples?
 
 ---
 
@@ -750,6 +846,18 @@ Three ways to present, in order of how much can go wrong on the day:
 - Documentation: endpoint, fields, limits. <https://aistudio.google.com/docs/decisions-api>
 - A worked walkthrough on dev.to. <https://dev.to/philschmid/fast-multimodal-control-flow-with-the-gemini-decisions-api-533b>
 
+**JevBench and models you can run yourself**
+
+- JevBench leaderboard and method, read November 12, 2026. <https://jevbench.dev/leaderboard> and <https://jevbench.dev/about>
+- The StarCraft II harness. <https://github.com/rapidstartup/jev-plays-starcraft-2>
+- LocalJev, GitHub Next. <https://github.com/githubnext/localjev>
+- OpenJev. <https://github.com/razorback16/openjev>
+- SemIf, formerly OpenJev. <https://github.com/TheoLeeCJ/SemIf-OpenJev>
+- jeff. <https://github.com/logan-markewich/jeff>
+- Laya, and its Apple Silicon port. <https://github.com/NandhaKishorM/laya> and <https://github.com/mizorewww/laya-mlx>
+- NanoJev. <https://github.com/TianyuCodings/NanoJev>
+- The other JevBench, the accuracy leaderboard Microsoft's post links to. <https://benchmarkheaven.com/jev-models>
+
 **Further reading**
 
 - Henk Boelman (Microsoft), "Not Every Decision Needs a Genius. Meet Decision
@@ -772,6 +880,10 @@ Three ways to present, in order of how much can go wrong on the day:
   reports of an OpenAI Decisions API and of decision models from other
   vendors. The independent test results in section 3 are quoted from
   Boelman's post and were not checked against their original sources.
+- For the local projects in section 3 we read each README and confirmed each
+  repository on November 12, 2026, and read LocalJev's statement about its
+  probabilities directly. We ran none of them. Their accuracy and speed
+  figures are their own.
 - The flip-rate and injection results in section 8 are our own, from 248 real
   calls on invented text. They are small tests, not benchmarks.
 - Everything in sections 5 to 8 comes from the project's own code, tests and

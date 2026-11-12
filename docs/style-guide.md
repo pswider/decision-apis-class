@@ -93,6 +93,7 @@ because it names real ones.
 | `images/generate-vs-decide.svg` | The core idea, in two cards |
 | `images/timeline.svg` | The three announcements |
 | `images/architecture.svg` | A line's path from the database to a score |
+| `images/three-ways.svg` | Three ways a local model makes the probability |
 | `images/score-bands.svg` | How a probability becomes a band |
 | `images/stats.svg` | The year in five numbers |
 | `images/results.svg` | How the model read the lines |
