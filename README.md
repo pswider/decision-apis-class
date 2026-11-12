@@ -30,10 +30,12 @@
 <td>
 
 **Taught by [Paul J. Swider](docs/speaker.md)**, founder, CEO and Chief AI
-Officer of RealActivity. 31 conference events in 10 countries since 2017,
-Sessionize Most Active Speaker three years running, and co-author of three
-editions of Wrox's *Professional SharePoint Development*. He built the system
-this class is taught from.
+Officer of RealActivity, and a Microsoft Certified Trainer since 1996. He has
+been putting AI directly in patients' hands since 2001, and has spoken
+publicly on generative AI and the patient experience since 2023, one of the
+earliest voices in the field. He created Tula, one of the first open-source,
+patient-owned health agents, and is a leading voice on patient-first AI
+governance. He built the system this class is taught from.
 **[Speaker and trainer details](docs/speaker.md)**
 
 </td>

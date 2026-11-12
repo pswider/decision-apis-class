@@ -1,9 +1,10 @@
 <p align="center">
-  <img src="../images/speaker-hero.svg" alt="Paul J. Swider. Founder, CEO and Chief AI Officer, RealActivity. Thirty years building healthcare technology. He teaches what he shipped last week." width="100%">
+  <img src="../images/speaker-hero.svg" alt="Paul J. Swider. Founder, CEO and Chief AI Officer, RealActivity. Putting AI directly in patients' hands since 2001. A Microsoft Certified Trainer since 1996. He teaches what he shipped last week." width="100%">
 </p>
 
 <p align="center">
   <a href="../README.md"><b>Back to the class</b></a> &nbsp;·&nbsp;
+  <a href="#signature-claims"><b>Signature claims</b></a> &nbsp;·&nbsp;
   <a href="#the-record-in-eight-numbers"><b>The record</b></a> &nbsp;·&nbsp;
   <a href="#why-this-class-is-his-to-teach"><b>Why this class</b></a> &nbsp;·&nbsp;
   <a href="#on-stage"><b>On stage</b></a> &nbsp;·&nbsp;
@@ -43,6 +44,28 @@ the founder of the Boston Healthcare Cloud & AI Community.
 > - **Stated**: said by Paul or his company, and not independently checked.
 >
 > It is the speaker bio held to the standard of the class.
+
+## Signature claims
+
+<p align="center">
+  <img src="../images/speaker-claims.svg" alt="Four signature claims. One, stated: putting AI directly in patients' hands since 2001, with a handheld screening engine that ran for more than a decade. Two, published: one of the earliest voices on generative AI and the patient experience, speaking publicly since May 2023. Three, measured: creator of Tula, one of the first open-source, patient-owned health agents. Four, published: a leading voice on patient-first AI governance." width="100%">
+</p>
+
+1. **Putting AI directly in patients' hands since 2001.**
+2. **One of the earliest voices on generative AI and the patient experience,
+   speaking publicly since 2023.**
+3. **Creator of Tula, one of the first open-source, patient-owned health
+   agents.**
+4. **A leading voice on patient-first AI governance.**
+
+Each one, held to the same labels as the rest of this page.
+
+| Claim | What backs it | Label |
+| --- | --- | --- |
+| AI in patients' hands since 2001 | A symbolic AI pre-anesthesia screening engine, built with a physician who holds a patent on a widely known health-age algorithm. Patients answered questions on a handheld device, one of the first handed directly to patients, over one of the earliest Wi-Fi networks in an academic medical center. It ran for more than a decade, sending patients to an anesthesiologist only when needed | Stated |
+| Generative AI and the patient experience, since 2023 | His May 31, 2023 [Cloud Wars segment](https://cloudwars.com/ai/how-generative-ai-will-redefine-the-patient-experience-in-healthcare) on how generative AI would reach patient portals and chatbots, about six months after ChatGPT launched | Published |
+| Tula, one of the first open-source, patient-owned health agents | The [Tula repository](https://github.com/realactivity/tula), first commit March 22, 2026, with Paul as principal committer. "One of the first" is his characterization | Measured; Stated |
+| Patient-first AI governance | His September 10, 2026 [#shifthappens episode](https://www.avepoint.com/shifthappens/podcast/list/when-the-patient-owns-the-agent-the-case-for-individual-first-ai-governance), "When the Patient Owns the Agent", arguing that governance has to follow the patient's own agent, not stop at the hospital's systems | Published |
 
 ## The record in eight numbers
 
@@ -100,6 +123,9 @@ That last point is the reason to trust the rest.
 </p>
 
 **Measured** from his [Sessionize record](https://sessionize.com/pswider).
+Sessionize lists only events booked through it. Counting meetups, community
+days and keynotes, he says he has spoken at well over 100 events around the
+world since 2017. **Stated.**
 
 - **2024 was his busiest year on record:** nine events in five countries, the
   United States, the Philippines, Malaysia, South Korea and India.
@@ -145,8 +171,9 @@ The example in this class is Provider Activity Studio's Coding Review screen.
   community resources. **Measured**, on [his GitHub profile](https://github.com/pswider)
   and [his company's](https://github.com/realactivity). He has held the account since November 2015.
 - **A trainer's background.** He says he has trained more than 3,000
-  engineers across GE, IDX and Microsoft in enterprise software patterns,
-  and his company lists him as a Microsoft Certified Trainer. **Stated.**
+  engineers across GE, IDX and Microsoft in enterprise software patterns.
+  He has been a Microsoft Certified Trainer continuously since 1996, which
+  he believes is one of the longest runs in the program. **Stated.**
 
 ## Writing
 
@@ -177,16 +204,17 @@ The example in this class is Provider Activity Studio's Coding Review screen.
 
 | Year | What happened | Label |
 | --- | --- | --- |
-| 2001 | Designs a symbolic AI triage engine that removed pre-operative anesthesia visits for same-day surgery | Stated |
+| 1996 | First certified as a Microsoft Certified Trainer, continuously since | Stated |
+| 2001 | Designs a symbolic AI triage engine that removed pre-operative anesthesia visits for same-day surgery. Patients answer on a handheld device; the system runs for more than a decade | Stated |
 | 2010 | *Professional SharePoint 2010 Development* is published | Published |
 | 2012 | Second edition. Joins the Sharing the Point tour of South America | Published |
 | 2013 | *Professional SharePoint 2013 Development* is published | Published |
 | 2015 | Opens his GitHub account | Measured |
 | 2017 | First event on his Sessionize record | Measured |
 | 2021 to 2023 | Healthcare analyst for Cloud Wars: 45 articles and segments | Measured |
-| 2023 | Ships the Physician Activity Copilot. First of three Most Active Speaker years | Stated; Published |
+| 2023 | Speaks publicly on generative AI and the patient experience (Cloud Wars, May 31). Ships the Physician Activity Copilot. First of three Most Active Speaker years | Published; Stated; Published |
 | 2024 | Ships Wheelhouse. Nine conference events in five countries | Stated; Measured |
-| 2026 | Releases Tula as open source. Scores a year of hospital data with a decision model and builds this class around it | Measured |
+| 2026 | Releases Tula as open source. Makes the case for patient-first AI governance on #shifthappens. Scores a year of hospital data with a decision model and builds this class around it | Measured; Published |
 
 Twenty-five years separate a rules-based triage engine from a decision model
 scoring Medicare cost report lines. The question in both is the same one: can
@@ -204,6 +232,8 @@ All are **stated**. Ask him about any of them.
 - Migrated 50+ HIPAA workloads to Azure.
 - Former Microsoft MVP, and named Azure Most Influential.
 - A top 3 percent rated global speaker.
+- Well over 100 events spoken at around the world since 2017.
+- A Microsoft Certified Trainer continuously since 1996.
 - A community that now serves 40,000 people worldwide.
 - 114 countries visited, and counting.
 
