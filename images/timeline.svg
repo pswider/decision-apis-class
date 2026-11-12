@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 330" width="1200" height="330" role="img" aria-labelledby="t d">
+  <title id="t">Three decision APIs in eight weeks</title>
+  <desc id="d">Jev from TypeSafe AI was announced on September 15, 2026. Microsoft-Decision-1 was announced on October 9, 2026. Gemini Decision 1 from Google DeepMind was announced on November 11, 2026.</desc>
+  <rect width="1200" height="330" rx="24" fill="#FAF8F3"/>
+  <rect x="0.5" y="0.5" width="1199" height="329" rx="24" fill="none" stroke="#E1DBC6"/>
+
+  <text x="48" y="62" font-family="'Segoe Serif',Georgia,'Times New Roman',serif" font-size="30" fill="#191919">A category that formed in eight weeks</text>
+
+  <line x1="80" y1="118" x2="1120" y2="118" stroke="#E1DBC6" stroke-width="2"/>
+  <g>
+    <circle cx="220" cy="118" r="9" fill="#A76F3E" stroke="#FAF8F3" stroke-width="3"/>
+    <circle cx="600" cy="118" r="9" fill="#A76F3E" stroke="#FAF8F3" stroke-width="3"/>
+    <circle cx="980" cy="118" r="9" fill="#A76F3E" stroke="#FAF8F3" stroke-width="3"/>
+  </g>
+
+  <g font-family="'Segoe Sans','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif">
+    <g>
+      <rect x="60" y="146" width="320" height="150" rx="16" fill="#FFFFFF" stroke="#E1DBC6"/>
+      <text x="84" y="180" font-size="14" font-weight="600" letter-spacing="2" fill="#A76F3E">SEPTEMBER 15, 2026</text>
+      <text x="84" y="218" font-family="'Segoe Serif',Georgia,'Times New Roman',serif" font-size="30" fill="#191919">Jev</text>
+      <text x="84" y="246" font-size="16" fill="#4A413B">TypeSafe AI</text>
+      <text x="84" y="274" font-size="16" fill="#4A413B">$0.042 per million input tokens</text>
+    </g>
+    <g>
+      <rect x="440" y="146" width="320" height="150" rx="16" fill="#FFFFFF" stroke="#E1DBC6"/>
+      <text x="464" y="180" font-size="14" font-weight="600" letter-spacing="2" fill="#A76F3E">OCTOBER 9, 2026</text>
+      <text x="464" y="218" font-family="'Segoe Serif',Georgia,'Times New Roman',serif" font-size="30" fill="#191919">Microsoft-Decision-1</text>
+      <text x="464" y="246" font-size="16" fill="#4A413B">Microsoft, in Microsoft Foundry</text>
+      <text x="464" y="274" font-size="16" fill="#4A413B">$0.042 per million input tokens</text>
+    </g>
+    <g>
+      <rect x="820" y="146" width="320" height="150" rx="16" fill="#FFFFFF" stroke="#E1DBC6"/>
+      <text x="844" y="180" font-size="14" font-weight="600" letter-spacing="2" fill="#A76F3E">NOVEMBER 11, 2026</text>
+      <text x="844" y="218" font-family="'Segoe Serif',Georgia,'Times New Roman',serif" font-size="30" fill="#191919">Gemini Decision 1</text>
+      <text x="844" y="246" font-size="16" fill="#4A413B">Google DeepMind, in the Gemini API</text>
+      <text x="844" y="274" font-size="16" fill="#4A413B">$0.10 per million input tokens</text>
+    </g>
+  </g>
+</svg>

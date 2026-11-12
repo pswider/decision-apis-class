@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" width="1200" height="430" role="img" aria-labelledby="t d">
+  <title id="t">Generate versus decide</title>
+  <desc id="d">A generative call sends a prompt and gets text back that must be parsed. A decision call sends state and typed questions and gets typed answers with a probability for every option.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#5D524B"/></marker>
+  </defs>
+  <rect width="1200" height="430" rx="24" fill="#FAF8F3"/>
+  <rect x="0.5" y="0.5" width="1199" height="429" rx="24" fill="none" stroke="#E1DBC6"/>
+
+  <g font-family="'Segoe Sans','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif">
+    <!-- Generate -->
+    <rect x="40" y="40" width="540" height="350" rx="18" fill="#FFFFFF" stroke="#E1DBC6"/>
+    <text x="72" y="92" font-family="'Segoe Serif',Georgia,'Times New Roman',serif" font-size="34" fill="#191919">Generate</text>
+    <text x="72" y="122" font-size="17" fill="#5D524B">A chat or completion call</text>
+
+    <g font-size="16" fill="#191919" text-anchor="middle">
+      <rect x="72" y="152" width="128" height="60" rx="12" fill="#F4F1EA" stroke="#E1DBC6"/>
+      <text x="136" y="188">Prompt</text>
+      <rect x="244" y="152" width="128" height="60" rx="12" fill="#F4F1EA" stroke="#E1DBC6"/>
+      <text x="308" y="188">Model</text>
+      <rect x="416" y="152" width="132" height="60" rx="12" fill="#F4F1EA" stroke="#E1DBC6"/>
+      <text x="482" y="180">Text you</text>
+      <text x="482" y="200">must parse</text>
+    </g>
+    <path d="M204 182 H238" stroke="#5D524B" stroke-width="2" marker-end="url(#a)"/>
+    <path d="M376 182 H410" stroke="#5D524B" stroke-width="2" marker-end="url(#a)"/>
+
+    <g font-size="17" fill="#4A413B">
+      <circle cx="80" cy="259" r="4" fill="#96826F"/><text x="96" y="265">Seconds per call</text>
+      <circle cx="80" cy="295" r="4" fill="#96826F"/><text x="96" y="301">Output tokens are billed, and are the slow part</text>
+      <circle cx="80" cy="331" r="4" fill="#96826F"/><text x="96" y="337">"How sure are you?" is one more thing it writes</text>
+      <circle cx="80" cy="367" r="4" fill="#96826F"/><text x="96" y="373">You get a reason</text>
+    </g>
+
+    <!-- Decide -->
+    <rect x="620" y="40" width="540" height="350" rx="18" fill="#F7ECD9" stroke="#A76F3E" stroke-width="1.5"/>
+    <text x="652" y="92" font-family="'Segoe Serif',Georgia,'Times New Roman',serif" font-size="34" fill="#191919">Decide</text>
+    <text x="652" y="122" font-size="17" fill="#5D524B">A decision API call</text>
+
+    <g font-size="16" fill="#191919" text-anchor="middle">
+      <rect x="652" y="152" width="128" height="60" rx="12" fill="#FFFFFF" stroke="#E1DBC6"/>
+      <text x="716" y="180">State + typed</text>
+      <text x="716" y="200">questions</text>
+      <rect x="824" y="152" width="128" height="60" rx="12" fill="#FFFFFF" stroke="#E1DBC6"/>
+      <text x="888" y="188">Model</text>
+      <rect x="996" y="152" width="132" height="60" rx="12" fill="#191919"/>
+      <text x="1062" y="180" fill="#FEF9ED">Typed answers</text>
+      <text x="1062" y="200" fill="#FEF9ED">+ probabilities</text>
+    </g>
+    <path d="M784 182 H818" stroke="#5D524B" stroke-width="2" marker-end="url(#a)"/>
+    <path d="M956 182 H990" stroke="#5D524B" stroke-width="2" marker-end="url(#a)"/>
+
+    <g font-size="17" fill="#4A413B">
+      <circle cx="660" cy="259" r="4" fill="#A76F3E"/><text x="676" y="265">About 100 milliseconds per call</text>
+      <circle cx="660" cy="295" r="4" fill="#A76F3E"/><text x="676" y="301">No output tokens. Nothing to parse</text>
+      <circle cx="660" cy="331" r="4" fill="#A76F3E"/><text x="676" y="337">A probability for every option, to threshold and sort</text>
+      <circle cx="660" cy="367" r="4" fill="#A76F3E"/><text x="676" y="373">You get a decision, not a reason</text>
+    </g>
+  </g>
+</svg>

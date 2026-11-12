@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" role="img" aria-labelledby="t d">
+  <title id="t">How code certainty becomes a band</title>
+  <desc id="d">Code certainty runs from 0 to 100 percent. At or below 15 percent a line is likely miscoded and is opened first. From 15 to 85 percent it is worth a look. At or above 85 percent it is confirmed and can be skipped. Separately, a line is unclear text when the model chose "the text does not say" or its top class is under 60 percent.</desc>
+  <rect width="1200" height="380" rx="24" fill="#FAF8F3"/>
+  <rect x="0.5" y="0.5" width="1199" height="379" rx="24" fill="none" stroke="#E1DBC6"/>
+
+  <text x="48" y="62" font-family="'Segoe Serif',Georgia,'Times New Roman',serif" font-size="30" fill="#191919">From a probability to a place in the queue</text>
+  <text x="48" y="92" font-family="'Segoe Sans','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="16" fill="#5D524B">Code certainty: the probability the model gives to the class the line is already coded as.</text>
+
+  <g font-family="'Segoe Sans','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif">
+    <!-- band names -->
+    <g font-size="17" font-weight="600" fill="#191919">
+      <text x="100" y="146">Likely miscoded</text>
+      <text x="252" y="146">Worth a look</text>
+      <text x="952" y="146">Confirmed</text>
+    </g>
+    <g font-size="15" fill="#5D524B">
+      <text x="100" y="168">Open first</text>
+      <text x="252" y="168">Second tier</text>
+      <text x="952" y="168">Skip</text>
+    </g>
+
+    <!-- the scale: 1000px = 100% -->
+    <rect x="100" y="184" width="149" height="28" rx="4" fill="#B8432F"/>
+    <rect x="251" y="184" width="698" height="28" rx="4" fill="#BF7F17"/>
+    <rect x="951" y="184" width="149" height="28" rx="4" fill="#1B8A6B"/>
+
+    <g font-size="15" fill="#4A413B" text-anchor="middle">
+      <text x="100" y="238">0%</text>
+      <text x="250" y="238">15%</text>
+      <text x="950" y="238">85%</text>
+      <text x="1100" y="238">100%</text>
+    </g>
+    <g stroke="#96826F" stroke-width="1">
+      <line x1="100" y1="214" x2="100" y2="222"/>
+      <line x1="250" y1="214" x2="250" y2="222"/>
+      <line x1="950" y1="214" x2="950" y2="222"/>
+      <line x1="1100" y1="214" x2="1100" y2="222"/>
+    </g>
+
+    <!-- unclear -->
+    <line x1="48" y1="270" x2="1152" y2="270" stroke="#E1DBC6"/>
+    <rect x="100" y="298" width="28" height="28" rx="4" fill="#3D7FC4"/>
+    <text x="142" y="311" font-size="17" font-weight="600" fill="#191919">Unclear text</text>
+    <text x="142" y="334" font-size="15" fill="#5D524B">Checked first, whatever the certainty: the model chose "the text does not say", or its top class is under 60%.</text>
+  </g>
+</svg>

@@ -1,27 +1,53 @@
-# Decision APIs in practice
+<h1 align="center">
+  <img src="images/banner.svg" alt="Decision APIs in practice. A 45 to 50 minute class on Jev, Microsoft-Decision-1 and Gemini Decision 1, and what happened when one of them scored a year of Medicare cost report coding." width="100%">
+</h1>
 
-**A 45 to 50 minute class.** What decision APIs are, how the three that matter
-right now compare, and what happened when one of them was pointed at a real
-problem: checking how an academic health system codes physician time for its
-Medicare cost report.
+<p align="center">
+  <img src="https://img.shields.io/badge/Length-45%20to%2050%20min-A76F3E?style=flat-square&labelColor=191919" alt="Length: 45 to 50 minutes">
+  <img src="https://img.shields.io/badge/Level-Technical-A76F3E?style=flat-square&labelColor=191919" alt="Level: technical">
+  <img src="https://img.shields.io/badge/APIs%20compared-3-A76F3E?style=flat-square&labelColor=191919" alt="APIs compared: 3">
+  <img src="https://img.shields.io/badge/Code%20links-15-A76F3E?style=flat-square&labelColor=191919" alt="Code links: 15">
+  <img src="https://img.shields.io/badge/Facts%20checked-November%2011%2C%202026-A76F3E?style=flat-square&labelColor=191919" alt="Facts checked November 11, 2026">
+</p>
+
+<p align="center">
+  <a href="#1-run-of-show"><b>Run of show</b></a> &nbsp;·&nbsp;
+  <a href="#2-what-a-decision-api-is"><b>Concepts</b></a> &nbsp;·&nbsp;
+  <a href="#3-three-decision-apis-side-by-side"><b>The three APIs</b></a> &nbsp;·&nbsp;
+  <a href="#6-code-tour-the-links"><b>Code tour</b></a> &nbsp;·&nbsp;
+  <a href="#7-what-happened-on-real-data"><b>Results</b></a> &nbsp;·&nbsp;
+  <a href="#8-what-went-wrong-and-what-it-taught"><b>Lessons</b></a> &nbsp;·&nbsp;
+  <a href="#11-sources"><b>Sources</b></a>
+</p>
+
+<br>
+
+What decision APIs are, how the three that matter right now compare, and what
+happened when one of them was pointed at a real problem: checking how an
+academic health system codes physician time for its Medicare cost report.
 
 The real-world example is **Provider Activity Studio**, a Next.js and SQL
 Server application, and its **Coding Review** screen, which uses TypeSafe
 AI's **Jev** to score how sure a model is that each line of physician time was
 coded to the right regulatory class.
 
-> **About the links.** The code links below point at a private repository,
-> pinned to one commit. They work for people who have been given access and
-> show a 404 for everyone else. The class is taught from the links; this page
-> carries enough on its own to follow along without them.
->
-> **About the data.** Every screenshot here shows invented lines. The health
-> system is not named. Real results appear only as counts, and they are the
-> model's output, not findings: no person has reviewed them yet.
+> [!NOTE]
+> **About the links.** The code links point at a private repository, pinned to
+> one commit. They work for people who have been given access and show a 404
+> for everyone else. This page carries enough on its own to follow along
+> without them.
 
-![Coding Review on invented lines](images/01-coding-review-overview.png)
+> [!IMPORTANT]
+> **About the data.** Every screenshot shows invented lines. The health system
+> is not named. Real results appear only as counts, and they are the model's
+> output, not findings: no person has reviewed them yet.
 
-## Contents
+<p align="center">
+  <img src="images/01-coding-review-overview.png" alt="The Coding Review screen on invented lines: summary numbers, a Try it box, and a review queue sorted by code certainty" width="100%">
+</p>
+
+<details>
+<summary><b>Contents</b></summary>
 
 1. [Run of show](#1-run-of-show)
 2. [What a decision API is](#2-what-a-decision-api-is)
@@ -35,8 +61,13 @@ coded to the right regulatory class.
 10. [Running the demo](#10-running-the-demo)
 11. [Sources](#11-sources)
 
-Speaker notes, minute by minute, are in [docs/speaker-notes.md](docs/speaker-notes.md).
-Request and response samples are in [examples/](examples/).
+</details>
+
+| For the presenter | |
+| --- | --- |
+| [Speaker notes](docs/speaker-notes.md) | Minute by minute talking points, and answers to the questions you will get |
+| [Examples](examples/) | A real Jev request and response, and the same question in Microsoft's and Google's shapes |
+| [Style guide](docs/style-guide.md) | The colors and type used here, for slides that match |
 
 ---
 
@@ -84,6 +115,10 @@ different things, and the class comes back to that in section 2.
 A chat model **generates**: you send a prompt and get text back, then parse
 it. A decision API **decides**: you send some state and a set of typed
 questions, and you get typed answers with probabilities. It writes no text.
+
+<p align="center">
+  <img src="images/generate-vs-decide.svg" alt="Generate: prompt, model, text you must parse. Decide: state and typed questions, model, typed answers with probabilities." width="100%">
+</p>
 
 | | Generative call | Decision call |
 | --- | --- | --- |
@@ -135,6 +170,10 @@ rankable signal. It does not give you an argument you can show an auditor.
 
 Checked against the vendors' own pages on November 11, 2026. Things move
 weekly in this category; treat the table as a snapshot.
+
+<p align="center">
+  <img src="images/timeline.svg" alt="Jev, September 15, 2026. Microsoft-Decision-1, October 9, 2026. Gemini Decision 1, November 11, 2026." width="100%">
+</p>
 
 | | **Jev** | **Microsoft-Decision-1** | **Gemini Decision 1** |
 | --- | --- | --- | --- |
@@ -212,29 +251,17 @@ about 7,500 claimed lines a year.
 **The question for a decision API:** given only the words in the description,
 how sure are you that the code is right?
 
-This is not legal or compliance advice. The regulation is summarized to make
-the example understandable.
+> [!NOTE]
+> This is not legal or compliance advice. The regulation is summarized to make
+> the example understandable.
 
 ---
 
 ## 5. How the example works
 
-```
- SQL Server (scrubbed copy)          the only exit            TypeSafe API
-┌──────────────────────────┐   ┌───────────────────┐   ┌──────────────────────┐
-│ finance lines             │   │ allowlist: 2 text │   │ POST /v1/systemone   │
-│  role text, feed type,    ├──►│ fields            ├──►│  state + 3 questions │
-│  FTE, names, ids          │   │ scrub names, ids, │   │                      │
-└──────────────────────────┘   │ numbers           │   │ answers +            │
-        ▲            ▲          └───────────────────┘   │ probabilities        │
-        │            │                                   └──────────┬───────────┘
-        │   ┌────────┴─────────┐   ┌──────────────────────┐         │
-        │   │ review queue      │◄──┤ derive: certainty,   │◄────────┘
-        │   │ sorted by score   │   │ band, direction      │
-        │   └────────┬─────────┘   └──────────────────────┘
-        │            ▼
-        └──── a person's verdict (kept per line; measures calibration)
-```
+<p align="center">
+  <img src="images/architecture.svg" alt="A line is read from a de-identified database, two text fields pass through redaction, they are posted with three typed questions to the decision API, the probabilities become a score, and the score orders a review queue where a person records a verdict." width="100%">
+</p>
 
 ### The question we ask
 
@@ -271,12 +298,19 @@ Several options map to one class, so:
 It answers "how sure is the model that the existing code is right". The queue
 sorts on it, lowest first.
 
+<p align="center">
+  <img src="images/score-bands.svg" alt="Code certainty from 0 to 100 percent. At or below 15 percent: likely miscoded. Between 15 and 85 percent: worth a look. At or above 85 percent: confirmed. Unclear text is checked first, whatever the certainty." width="100%">
+</p>
+
 | Band | Rule (defaults: high 0.85, mid 0.60) | What a reviewer does |
 | --- | --- | --- |
 | Likely miscoded | Code certainty at or below 0.15 | Open first |
 | Unclear text | The model chose "does not say", or its top class is under 0.60 | A documentation problem in its own right |
 | Confirmed | Code certainty at or above 0.85 | Skip |
 | Worth a look | Anything else | Second tier |
+
+Unclear text is checked first: a line whose text says nothing is never called
+miscoded or confirmed.
 
 A likely-miscoded line also gets a **direction**. *Overclaim* means the line is
 claimed (provider or teaching) and the text reads as something not claimable.
@@ -380,6 +414,10 @@ never sent get counted, with a reason for each.
 
 ### More, if there is time
 
+<details>
+<summary><b>Nine more links</b>: the guard, the cache, the schema, the tests, the mock</summary>
+<br>
+
 | Link | What it is | Why it is worth a look |
 | --- | --- | --- |
 | [`config.ts`, lines 46 to 91](https://github.com/realactivity/provider-activity-studio/blob/13cc75a15459143c03a92f6b218b77b42e10ae16/web/lib/decisions/config.ts#L46-L91) | The feature flag and the database guard | The feature refuses to run against a production database whatever the flag says. A guard in code beats a rule in a document. |
@@ -392,6 +430,8 @@ never sent get counted, with a reason for each.
 | [`app/api/decisions/run/route.ts`](https://github.com/realactivity/provider-activity-studio/blob/13cc75a15459143c03a92f6b218b77b42e10ae16/web/app/api/decisions/run/route.ts) | The HTTP route that starts a run | Where funded and grant lines are refused. |
 | [`docs/JEV_DEV_DEMO.md`](https://github.com/realactivity/provider-activity-studio/blob/13cc75a15459143c03a92f6b218b77b42e10ae16/docs/JEV_DEV_DEMO.md) | The build log | Every step, every number, every mistake, in order. |
 
+</details>
+
 ---
 
 ## 7. What happened on real data
@@ -399,6 +439,10 @@ never sent get counted, with a reason for each.
 One fiscal year of claimed lines (administration and teaching) for physicians
 at an academic health system, on a de-identified copy of the database, scored
 by `jev-1.14.0` on November 10, 2026.
+
+<p align="center">
+  <img src="images/stats.svg" alt="7,472 lines scored, 917 distinct texts, 771 model calls, 64 milliseconds median latency, 3 cents total cost." width="100%">
+</p>
 
 | Scope | Lines | Physicians | Distinct texts | Model calls | Cost |
 | --- | --- | --- | --- | --- | --- |
@@ -418,10 +462,20 @@ A line is one role in one month.
 
 How the model read the whole-system lines:
 
+<p align="center">
+  <img src="images/results.svg" alt="Administration, 5,628 lines: 51 percent confirmed, 15 percent worth a look, 26 percent unclear text, 8 percent likely miscoded. Teaching, 1,844 lines: 19 percent confirmed, 25 percent worth a look, 50 percent unclear text, 7 percent likely miscoded." width="100%">
+</p>
+
+<details>
+<summary><b>The same numbers as a table</b></summary>
+<br>
+
 | Coded as | Lines | Confirmed | Worth a look | Unclear text | Likely miscoded |
 | --- | --- | --- | --- | --- | --- |
 | Administration (provider component) | 5,628 | 2,892 | 816 | 1,486 | 434 |
 | Teaching | 1,844 | 347 | 459 | 914 | 124 |
+
+</details>
 
 Three things to draw out:
 
@@ -437,6 +491,7 @@ Three things to draw out:
    the most useful one: the documentation behind a third of the claimed time
    would not tell an outsider what the time was for.
 
+> [!WARNING]
 > **Read this before quoting a number.** These are model outputs on short
 > text. At the time of writing no person had recorded a single verdict, so
 > the calibration of these scores on this data is unknown. "Likely miscoded"
@@ -473,6 +528,10 @@ The lessons that generalize:
   above are about data that was not what everyone believed.
 - **Build the calibration experiment into the product.** The verdict buttons
   are not a nicety. Without them the scores stay a vendor claim.
+
+> [!TIP]
+> If the room remembers one line: **an allowlist of columns is not an
+> allowlist of content.**
 
 ---
 
@@ -565,3 +624,13 @@ Three ways to present, in order of how much can go wrong on the day:
 - The Jev request and response in [examples/](examples/) are from a real
   call. The Microsoft and Google samples are shapes from their documentation
   and were not run.
+
+---
+
+<p align="center">
+  <sub>
+    Independent class materials. Not affiliated with, sponsored by or endorsed by Microsoft, Google or TypeSafe AI.<br>
+    Product names belong to their owners. The colors and type follow the public Microsoft AI site as a courtesy to the venue; no logos are used.<br>
+    <a href="docs/style-guide.md">Style guide</a> &nbsp;·&nbsp; <a href="docs/speaker-notes.md">Speaker notes</a> &nbsp;·&nbsp; <a href="examples/">Examples</a>
+  </sub>
+</p>

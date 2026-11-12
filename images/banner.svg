@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Decision APIs in practice</title>
+  <desc id="d">A 45 to 50 minute class on Jev, Microsoft-Decision-1 and the Gemini Decisions API, with a real example scoring Medicare cost report coding.</desc>
+  <defs>
+    <clipPath id="card"><rect width="1200" height="420" rx="24"/></clipPath>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="70"/></filter>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6F8499"/>
+      <stop offset="0.55" stop-color="#8296A8"/>
+      <stop offset="1" stop-color="#5E7388"/>
+    </linearGradient>
+    <linearGradient id="shade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#191919" stop-opacity="0.42"/>
+      <stop offset="0.6" stop-color="#191919" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#191919" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#card)">
+    <rect width="1200" height="420" fill="url(#base)"/>
+    <g filter="url(#soft)">
+      <ellipse cx="930" cy="150" rx="330" ry="110" fill="#F2B56B" transform="rotate(-28 930 150)"/>
+      <ellipse cx="1090" cy="330" rx="260" ry="90" fill="#F7DFA8" transform="rotate(-28 1090 330)"/>
+      <ellipse cx="640" cy="40" rx="260" ry="70" fill="#E9A66A" opacity="0.75" transform="rotate(-28 640 40)"/>
+      <ellipse cx="180" cy="420" rx="320" ry="120" fill="#9FB4C6" opacity="0.8"/>
+    </g>
+    <rect width="1200" height="420" fill="url(#shade)"/>
+
+    <text x="72" y="96" font-family="'Segoe Sans','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="17" font-weight="600" letter-spacing="3" fill="#FEF9ED">A 45 TO 50 MINUTE CLASS</text>
+    <text x="70" y="186" font-family="'Segoe Serif',Georgia,'Times New Roman',serif" font-size="76" fill="#FAF8F3">Decision APIs in practice</text>
+    <text font-family="'Segoe Sans','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="25" fill="#FEF9ED">
+      <tspan x="72" y="244">Three APIs that decide instead of generate, and what happened</tspan>
+      <tspan x="72" y="278">when one of them scored a year of Medicare cost report coding.</tspan>
+    </text>
+
+    <g font-family="'Segoe Sans','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="17" font-weight="600" fill="#191919">
+      <rect x="72" y="322" width="74" height="40" rx="20" fill="#FEF9ED"/>
+      <text x="109" y="348" text-anchor="middle">Jev</text>
+      <rect x="158" y="322" width="214" height="40" rx="20" fill="#FEF9ED"/>
+      <text x="265" y="348" text-anchor="middle">Microsoft-Decision-1</text>
+      <rect x="384" y="322" width="188" height="40" rx="20" fill="#FEF9ED"/>
+      <text x="478" y="348" text-anchor="middle">Gemini Decision 1</text>
+    </g>
+  </g>
+</svg>

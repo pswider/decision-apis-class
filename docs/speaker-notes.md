@@ -1,5 +1,7 @@
 # Speaker notes
 
+[Back to the class](../README.md) · [Examples](../examples/) · [Style guide](style-guide.md)
+
 Minute by minute for a 50 minute slot. Everything on screen is the
 [README](../README.md); scroll it, do not switch windows more than you have
 to. Times are when each segment starts.

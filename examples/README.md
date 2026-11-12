@@ -1,5 +1,7 @@
 # Request and response samples
 
+[Back to the class](../README.md) · [Speaker notes](../docs/speaker-notes.md)
+
 | File | What it is | Run by us? |
 | --- | --- | --- |
 | [jev-request.json](jev-request.json) | The request the example sends for one line: three questions over one state | Yes |

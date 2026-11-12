@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 190" width="1200" height="190" role="img" aria-labelledby="t d">
+  <title id="t">One fiscal year, in five numbers</title>
+  <desc id="d">7,472 lines of claimed physician time for 484 physicians became 917 distinct texts and 771 model calls, at a median of 64 milliseconds a call, for about 3 cents in total.</desc>
+  <rect width="1200" height="190" rx="24" fill="#FAF8F3"/>
+  <rect x="0.5" y="0.5" width="1199" height="189" rx="24" fill="none" stroke="#E1DBC6"/>
+  <g font-family="'Segoe Sans','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif">
+    <g>
+      <rect x="30" y="28" width="212" height="134" rx="16" fill="#FFFFFF" stroke="#E1DBC6"/>
+      <text x="54" y="68" font-size="15" fill="#5D524B">Lines scored</text>
+      <text x="54" y="118" font-size="44" font-weight="600" fill="#191919">7,472</text>
+      <text x="54" y="144" font-size="14" fill="#5D524B">484 physicians, one year</text>
+    </g>
+    <g>
+      <rect x="262" y="28" width="212" height="134" rx="16" fill="#FFFFFF" stroke="#E1DBC6"/>
+      <text x="286" y="68" font-size="15" fill="#5D524B">Distinct texts</text>
+      <text x="286" y="118" font-size="44" font-weight="600" fill="#191919">917</text>
+      <text x="286" y="144" font-size="14" fill="#5D524B">A role repeats every month</text>
+    </g>
+    <g>
+      <rect x="494" y="28" width="212" height="134" rx="16" fill="#FFFFFF" stroke="#E1DBC6"/>
+      <text x="518" y="68" font-size="15" fill="#5D524B">Model calls</text>
+      <text x="518" y="118" font-size="44" font-weight="600" fill="#191919">771</text>
+      <text x="518" y="144" font-size="14" fill="#5D524B">The rest came from cache</text>
+    </g>
+    <g>
+      <rect x="726" y="28" width="212" height="134" rx="16" fill="#FFFFFF" stroke="#E1DBC6"/>
+      <text x="750" y="68" font-size="15" fill="#5D524B">Median latency</text>
+      <text x="750" y="118" font-size="44" font-weight="600" fill="#191919">64 ms</text>
+      <text x="750" y="144" font-size="14" fill="#5D524B">Per call, no failures</text>
+    </g>
+    <g>
+      <rect x="958" y="28" width="212" height="134" rx="16" fill="#F7ECD9" stroke="#A76F3E" stroke-width="1.5"/>
+      <text x="982" y="68" font-size="15" fill="#5D524B">Total cost</text>
+      <text x="982" y="118" font-size="44" font-weight="600" fill="#191919">$0.03</text>
+      <text x="982" y="144" font-size="14" fill="#5D524B">Input tokens only</text>
+    </g>
+  </g>
+</svg>
