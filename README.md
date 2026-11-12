@@ -1,6 +1,6 @@
-<h1 align="center">
+<p align="center">
   <img src="images/banner.svg" alt="Decision APIs in practice. A 45 to 50 minute class on Jev, Microsoft-Decision-1 and Gemini Decision 1, and what happened when one of them scored a year of Medicare cost report coding." width="100%">
-</h1>
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Length-45%20to%2050%20min-A76F3E?style=flat-square&labelColor=191919" alt="Length: 45 to 50 minutes">
