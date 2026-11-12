@@ -1,0 +1,43 @@
+{
+  "model": "jev-1.14.0",
+  "answers": {
+    "time_class": {
+      "type": "choice",
+      "choice": "provider_admin",
+      "probabilities": {
+        "provider_admin": 1,
+        "provider_supervision": 0,
+        "provider_committee_qa": 0,
+        "provider_availability": 0,
+        "gme_teaching": 0,
+        "professional": 0,
+        "research": 0,
+        "other_nonreimbursable": 0,
+        "leave": 0,
+        "unclear": 0
+      },
+      "confidence": 1
+    },
+    "is_provider_component": {
+      "type": "noul",
+      "noul": 0.74
+    },
+    "rce_specialty": {
+      "type": "choice",
+      "choice": "internal_medicine",
+      "probabilities": {
+        "anesthesiology": 0.05,
+        "family_general_practice": 0,
+        "internal_medicine": 0.9,
+        "obstetrics_gynecology": 0,
+        "pathology": 0,
+        "pediatrics": 0,
+        "psychiatry": 0,
+        "radiology": 0,
+        "surgery": 0,
+        "other_total": 0.05
+      },
+      "confidence": 0.89
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "model": "jev-1.14.0",
+  "state": {
+    "description": "Medical Director, Intensive Care Unit"
+  },
+  "questions": {
+    "time_class": {
+      "type": "choice",
+      "instructions": "What kind of physician time does this description refer to? Choose unclear if the text does not say.",
+      "criteria": {
+        "provider_admin": "Administration or medical direction of a hospital department, unit, service or program",
+        "provider_supervision": "Supervising or training nurses, technicians or other hospital staff",
+        "provider_committee_qa": "Committee work, utilization review, quality assurance or quality improvement",
+        "provider_availability": "On-call or emergency availability paid by the hospital, not tied to a specific patient",
+        "gme_teaching": "Teaching or supervising residents or fellows in an accredited training program, including program director roles",
+        "professional": "Medical or surgical care of individual patients",
+        "research": "Research, whether sponsored or internally funded",
+        "other_nonreimbursable": "Work for another organization, fundraising, or other activity the hospital does not claim",
+        "leave": "Leave, sabbatical or other paid time away",
+        "unclear": "The text does not say"
+      }
+    },
+    "is_provider_component": {
+      "type": "noul",
+      "instructions": "Is this time spent on duties that benefit patients generally (administration, medical direction, supervision of staff, committee work, availability) rather than care of individual patients, resident teaching, or research?"
+    },
+    "rce_specialty": {
+      "type": "choice",
+      "instructions": "Which specialty group does the specialty text belong to?",
+      "criteria": {
+        "anesthesiology": "Anesthesiology",
+        "family_general_practice": "Family medicine or general practice",
+        "internal_medicine": "Internal medicine and its subspecialties",
+        "obstetrics_gynecology": "Obstetrics and gynecology",
+        "pathology": "Pathology",
+        "pediatrics": "Pediatrics",
+        "psychiatry": "Psychiatry",
+        "radiology": "Radiology",
+        "surgery": "Surgery and surgical subspecialties",
+        "other_total": "Any other specialty, or the text does not say"
+      }
+    }
+  }
+}

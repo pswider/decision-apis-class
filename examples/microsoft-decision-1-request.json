@@ -1,0 +1,23 @@
+{
+  "_note": "Shape from Microsoft Learn, November 11, 2026. Not run by us. POST to <your-foundry-resource-endpoint>/providers/microsoft/v1/systemone with an api-key header or an Entra ID bearer token. Remove this _note field before sending.",
+  "model": "<your-deployment-name>",
+  "state": "Medical Director, Intensive Care Unit",
+  "questions": {
+    "time_class": {
+      "type": "choice",
+      "instructions": "What kind of physician time does this description refer to? Choose unclear if the text does not say.",
+      "criteria": {
+        "provider_admin": "Administration or medical direction of a hospital department, unit, service or program",
+        "gme_teaching": "Teaching or supervising residents or fellows in an accredited training program",
+        "professional": "Medical or surgical care of individual patients",
+        "research": "Research, whether sponsored or internally funded",
+        "leave": "Leave, sabbatical or other paid time away",
+        "unclear": "The text does not say"
+      }
+    },
+    "is_provider_component": {
+      "type": "noul",
+      "instructions": "Is this time spent on duties that benefit patients generally rather than care of individual patients, resident teaching, or research?"
+    }
+  }
+}
