@@ -52,7 +52,7 @@
 
     <g font-size="17" fill="#4A413B">
       <circle cx="660" cy="259" r="4" fill="#A76F3E"/><text x="676" y="265">About 100 milliseconds per call</text>
-      <circle cx="660" cy="295" r="4" fill="#A76F3E"/><text x="676" y="301">No output tokens. Nothing to parse</text>
+      <circle cx="660" cy="295" r="4" fill="#A76F3E"/><text x="676" y="301">Output is not billed. Nothing to parse</text>
       <circle cx="660" cy="331" r="4" fill="#A76F3E"/><text x="676" y="337">A probability for every option, to threshold and sort</text>
       <circle cx="660" cy="367" r="4" fill="#A76F3E"/><text x="676" y="373">You get a decision, not a reason</text>
     </g>

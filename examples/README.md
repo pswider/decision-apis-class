@@ -8,6 +8,7 @@
 | [jev-response.json](jev-response.json) | The answer `jev-1.14.0` gave on November 10, 2026 | Yes |
 | [microsoft-decision-1-request.json](microsoft-decision-1-request.json) | The same question in the shape Microsoft Learn documents | No |
 | [gemini-decisions-request.json](gemini-decisions-request.json) | The same question in the shape Google's documentation describes | No |
+| [openrouter-request.json](openrouter-request.json) | The same question through OpenRouter's alpha Decisions API, which serves both Microsoft-Decision-1 and Jev | No |
 
 The text in every sample is invented: "Medical Director, Intensive Care Unit".
 
@@ -31,7 +32,8 @@ curl -s https://api.typesafe.ai/v1/systemone \
   the model was certain the phrase is administration (1.00) and gave only
   0.74 to the yes or no question about the same idea. Two wordings of one
   question do not have to agree, which is a reason to test your wording on
-  your own data.
+  your own data. Questions in one request are answered independently: neither
+  saw the other's answer.
 - The raw response also carries a `usage` block with the input token count.
   It is left out of the sample because the application's route returns the
   answers only. That call used about 850 input tokens; nothing is generated.
@@ -50,3 +52,18 @@ curl -s https://api.typesafe.ai/v1/systemone \
 The Microsoft and Google files were written from the vendors' documentation
 on November 11, 2026 and have not been sent to either service. Check them
 against the current documentation before relying on them.
+
+## One endpoint, two models
+
+Through OpenRouter the request does not change between Microsoft-Decision-1
+and Jev. Only the `model` field does:
+
+```diff
+-  "model": "microsoft/microsoft-decision-1",
++  "model": "typesafe/jev-1.13",
+```
+
+That shape comes from Henk Boelman's post of October 14, 2026, which also has
+runnable routing and flip-rate code. It is an alpha endpoint, it is a
+different API from chat so chat libraries will not work with it, and we have
+not run it.
