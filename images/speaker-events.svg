@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-labelledby="t d">
+  <title id="t">Conference events per year, 2017 to 2025</title>
+  <desc id="d">Events on his Sessionize record by year. 2017: 1. 2018: 1. 2019: 2. 2020: 4. 2021: 3. 2022: 3. 2023: 4. 2024: 9. 2025: 4, through July. Total 31.</desc>
+  <rect width="1200" height="400" rx="24" fill="#FAF8F3"/>
+  <rect x="0.5" y="0.5" width="1199" height="399" rx="24" fill="none" stroke="#E1DBC6"/>
+
+  <text x="48" y="62" font-family="'Segoe Serif',Georgia,'Times New Roman',serif" font-size="30" fill="#191919">31 events in nine years, and the pace is rising</text>
+  <text x="48" y="92" font-family="'Segoe Sans','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="16" fill="#5D524B">Conference events on his Sessionize record, by year. Counted November 12, 2026. The record ends in July 2025.</text>
+
+  <g font-family="'Segoe Sans','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif">
+    <!-- baseline at y=320, 22px per event -->
+    <line x1="120" y1="320" x2="1080" y2="320" stroke="#E1DBC6"/>
+    <g fill="#A76F3E">
+      <path d="M168 320 V302 a4 4 0 0 1 4 -4 h16 a4 4 0 0 1 4 4 V320 z"/>
+      <path d="M274 320 V302 a4 4 0 0 1 4 -4 h16 a4 4 0 0 1 4 4 V320 z"/>
+      <path d="M380 320 V280 a4 4 0 0 1 4 -4 h16 a4 4 0 0 1 4 4 V320 z"/>
+      <path d="M486 320 V236 a4 4 0 0 1 4 -4 h16 a4 4 0 0 1 4 4 V320 z"/>
+      <path d="M592 320 V258 a4 4 0 0 1 4 -4 h16 a4 4 0 0 1 4 4 V320 z"/>
+      <path d="M698 320 V258 a4 4 0 0 1 4 -4 h16 a4 4 0 0 1 4 4 V320 z"/>
+      <path d="M804 320 V236 a4 4 0 0 1 4 -4 h16 a4 4 0 0 1 4 4 V320 z"/>
+      <path d="M910 320 V126 a4 4 0 0 1 4 -4 h16 a4 4 0 0 1 4 4 V320 z"/>
+      <path d="M1016 320 V236 a4 4 0 0 1 4 -4 h16 a4 4 0 0 1 4 4 V320 z"/>
+    </g>
+    <g font-size="16" font-weight="600" fill="#191919" text-anchor="middle">
+      <text x="180" y="290">1</text>
+      <text x="286" y="290">1</text>
+      <text x="392" y="268">2</text>
+      <text x="498" y="224">4</text>
+      <text x="604" y="246">3</text>
+      <text x="710" y="246">3</text>
+      <text x="816" y="224">4</text>
+      <text x="922" y="114">9</text>
+      <text x="1028" y="224">4</text>
+    </g>
+    <g font-size="15" fill="#4A413B" text-anchor="middle">
+      <text x="180" y="346">2017</text>
+      <text x="286" y="346">2018</text>
+      <text x="392" y="346">2019</text>
+      <text x="498" y="346">2020</text>
+      <text x="604" y="346">2021</text>
+      <text x="710" y="346">2022</text>
+      <text x="816" y="346">2023</text>
+      <text x="922" y="346">2024</text>
+      <text x="1028" y="346">2025</text>
+    </g>
+    <text x="922" y="370" font-size="13" fill="#5D524B" text-anchor="middle">9 events, 5 countries</text>
+    <text x="1028" y="370" font-size="13" fill="#5D524B" text-anchor="middle">through July</text>
+  </g>
+</svg>

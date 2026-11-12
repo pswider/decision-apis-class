@@ -22,6 +22,24 @@
 
 <br>
 
+<table>
+<tr>
+<td width="110" align="center">
+  <a href="docs/speaker.md"><img src="https://github.com/pswider.png?size=160" alt="Paul J. Swider" width="80"></a>
+</td>
+<td>
+
+**Taught by [Paul J. Swider](docs/speaker.md)**, founder, CEO and Chief AI
+Officer of RealActivity. 31 conference events in 10 countries since 2017,
+Sessionize Most Active Speaker three years running, and co-author of three
+editions of Wrox's *Professional SharePoint Development*. He built the system
+this class is taught from.
+**[Speaker and trainer details](docs/speaker.md)**
+
+</td>
+</tr>
+</table>
+
 What decision APIs are, how the three that matter right now compare, and what
 happened when one of them was pointed at a real problem: checking how an
 academic health system codes physician time for its Medicare cost report.
@@ -65,6 +83,7 @@ coded to the right regulatory class.
 
 | For the presenter | |
 | --- | --- |
+| [Speaker and trainer](docs/speaker.md) | Who is teaching, with every number labeled measured, published or stated |
 | [Speaker notes](docs/speaker-notes.md) | Minute by minute talking points, and answers to the questions you will get |
 | [Examples](examples/) | A real Jev request and response, and the same question in Microsoft's and Google's shapes |
 | [Style guide](docs/style-guide.md) | The colors and type used here, for slides that match |
@@ -80,7 +99,7 @@ coded to the right regulatory class.
 | 0:13 | 10 | **The landscape.** Three APIs, a leaderboard you can watch, and models you can run yourself | [Section 3](#3-three-decision-apis-side-by-side) |
 | 0:23 | 5 | **The real problem.** Medicare, physician time, and why text matters | [Section 4](#4-the-real-problem) |
 | 0:28 | 13 | **Code tour.** Six links, from database row to score | [Section 6](#6-code-tour-the-links) |
-| 0:41 | 5 | **Results.** 8,324 lines for three cents | [Section 7](#7-what-happened-on-real-data) |
+| 0:41 | 5 | **Results.** 7,472 lines for three cents | [Section 7](#7-what-happened-on-real-data) |
 | 0:46 | 8 | **What went wrong.** Privacy catches, a wrong assumption, and a score that can be steered | [Section 8](#8-what-went-wrong-and-what-it-taught) |
 | 0:54 | 6 | **Discussion and questions** | [Section 9](#9-questions-for-the-room) |
 

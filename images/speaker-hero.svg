@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-labelledby="t d">
+  <title id="t">Paul J. Swider, speaker and trainer</title>
+  <desc id="d">Paul J. Swider. Founder, CEO and Chief AI Officer of RealActivity. Thirty years building healthcare technology. He teaches what he shipped last week.</desc>
+  <defs>
+    <clipPath id="card"><rect width="1200" height="360" rx="24"/></clipPath>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="70"/></filter>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5E7388"/>
+      <stop offset="0.6" stop-color="#7C91A4"/>
+      <stop offset="1" stop-color="#6F8499"/>
+    </linearGradient>
+    <linearGradient id="shade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#191919" stop-opacity="0.46"/>
+      <stop offset="0.65" stop-color="#191919" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#191919" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#card)">
+    <rect width="1200" height="360" fill="url(#base)"/>
+    <g filter="url(#soft)">
+      <ellipse cx="1010" cy="90" rx="300" ry="100" fill="#F2B56B" transform="rotate(24 1010 90)"/>
+      <ellipse cx="1130" cy="300" rx="240" ry="90" fill="#F7DFA8" transform="rotate(24 1130 300)"/>
+      <ellipse cx="700" cy="380" rx="260" ry="70" fill="#E9A66A" opacity="0.7" transform="rotate(24 700 380)"/>
+    </g>
+    <rect width="1200" height="360" fill="url(#shade)"/>
+
+    <text x="72" y="88" font-family="'Segoe Sans','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="17" font-weight="600" letter-spacing="3" fill="#FEF9ED">YOUR SPEAKER AND TRAINER</text>
+    <text x="70" y="172" font-family="'Segoe Serif',Georgia,'Times New Roman',serif" font-size="72" fill="#FAF8F3">Paul J. Swider</text>
+    <text x="72" y="222" font-family="'Segoe Sans','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="25" fill="#FEF9ED">Founder, CEO and Chief AI Officer, RealActivity</text>
+    <text font-family="'Segoe Serif',Georgia,'Times New Roman',serif" font-size="24" font-style="italic" fill="#F7ECD9">
+      <tspan x="72" y="282">Thirty years building healthcare technology.</tspan>
+      <tspan x="72" y="314">He teaches what he shipped last week.</tspan>
+    </text>
+  </g>
+</svg>

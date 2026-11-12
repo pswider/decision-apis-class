@@ -97,6 +97,7 @@ because it names real ones.
 | `images/score-bands.svg` | How a probability becomes a band |
 | `images/stats.svg` | The year in five numbers |
 | `images/results.svg` | How the model read the lines |
+| `images/speaker-hero.svg`, `speaker-stats.svg`, `speaker-events.svg`, `speaker-build.svg` | The speaker page: title card, the record, events by year, the build numbers |
 | `images/01` to `07` | Framed screenshots |
 
 The graphics are plain SVG text and can be edited by hand.

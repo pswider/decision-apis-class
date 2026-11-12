@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 372" width="1200" height="372" role="img" aria-labelledby="t d">
+  <title id="t">The record in eight numbers</title>
+  <desc id="d">Measured on public platforms on November 12, 2026: 31 conference events since 2017, in 10 countries; 149 community meetups held; 1,067 community members; 45 analyst articles. Published by third parties: Most Active Speaker three years running, 2023 to 2025; three book editions as co-author. Stated by his company: 15 hospitals running his platform, for more than 15 years.</desc>
+  <rect width="1200" height="372" rx="24" fill="#FAF8F3"/>
+  <rect x="0.5" y="0.5" width="1199" height="371" rx="24" fill="none" stroke="#E1DBC6"/>
+  <g font-family="'Segoe Sans','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif">
+    <!-- row 1 -->
+    <g>
+      <rect x="30" y="28" width="270" height="148" rx="16" fill="#FFFFFF" stroke="#E1DBC6"/>
+      <circle cx="59" cy="57" r="5" fill="#1B8A6B"/><text x="72" y="62" font-size="13" font-weight="600" letter-spacing="2" fill="#4A413B">MEASURED</text>
+      <text x="54" y="116" font-size="46" font-weight="600" fill="#191919">31</text>
+      <text x="54" y="142" font-size="15" fill="#4A413B">conference events since 2017</text>
+      <text x="54" y="162" font-size="13" fill="#5D524B">Sessionize speaker record</text>
+    </g>
+    <g>
+      <rect x="320" y="28" width="270" height="148" rx="16" fill="#FFFFFF" stroke="#E1DBC6"/>
+      <circle cx="349" cy="57" r="5" fill="#1B8A6B"/><text x="362" y="62" font-size="13" font-weight="600" letter-spacing="2" fill="#4A413B">MEASURED</text>
+      <text x="344" y="116" font-size="46" font-weight="600" fill="#191919">10</text>
+      <text x="344" y="142" font-size="15" fill="#4A413B">countries on that record</text>
+      <text x="344" y="162" font-size="13" fill="#5D524B">Three continents</text>
+    </g>
+    <g>
+      <rect x="610" y="28" width="270" height="148" rx="16" fill="#F7ECD9" stroke="#A76F3E" stroke-width="1.5"/>
+      <circle cx="639" cy="57" r="5" fill="#A76F3E"/><text x="652" y="62" font-size="13" font-weight="600" letter-spacing="2" fill="#4A413B">PUBLISHED</text>
+      <text x="634" y="116" font-size="46" font-weight="600" fill="#191919">3 years</text>
+      <text x="634" y="142" font-size="15" fill="#4A413B">Most Active Speaker</text>
+      <text x="634" y="162" font-size="13" fill="#5D524B">Sessionize, 2023, 2024, 2025</text>
+    </g>
+    <g>
+      <rect x="900" y="28" width="270" height="148" rx="16" fill="#FFFFFF" stroke="#E1DBC6"/>
+      <circle cx="929" cy="57" r="5" fill="#A76F3E"/><text x="942" y="62" font-size="13" font-weight="600" letter-spacing="2" fill="#4A413B">PUBLISHED</text>
+      <text x="924" y="116" font-size="46" font-weight="600" fill="#191919">3</text>
+      <text x="924" y="142" font-size="15" fill="#4A413B">book editions as co-author</text>
+      <text x="924" y="162" font-size="13" fill="#5D524B">Wrox, 2010, 2012, 2013</text>
+    </g>
+    <!-- row 2 -->
+    <g>
+      <rect x="30" y="196" width="270" height="148" rx="16" fill="#FFFFFF" stroke="#E1DBC6"/>
+      <circle cx="59" cy="225" r="5" fill="#1B8A6B"/><text x="72" y="230" font-size="13" font-weight="600" letter-spacing="2" fill="#4A413B">MEASURED</text>
+      <text x="54" y="284" font-size="46" font-weight="600" fill="#191919">149</text>
+      <text x="54" y="310" font-size="15" fill="#4A413B">community meetups held</text>
+      <text x="54" y="330" font-size="13" fill="#5D524B">The community he founded</text>
+    </g>
+    <g>
+      <rect x="320" y="196" width="270" height="148" rx="16" fill="#FFFFFF" stroke="#E1DBC6"/>
+      <circle cx="349" cy="225" r="5" fill="#1B8A6B"/><text x="362" y="230" font-size="13" font-weight="600" letter-spacing="2" fill="#4A413B">MEASURED</text>
+      <text x="344" y="284" font-size="46" font-weight="600" fill="#191919">1,067</text>
+      <text x="344" y="310" font-size="15" fill="#4A413B">members on Meetup</text>
+      <text x="344" y="330" font-size="13" fill="#5D524B">Rated 4.4 from 53 ratings</text>
+    </g>
+    <g>
+      <rect x="610" y="196" width="270" height="148" rx="16" fill="#FFFFFF" stroke="#E1DBC6"/>
+      <circle cx="639" cy="225" r="5" fill="#1B8A6B"/><text x="652" y="230" font-size="13" font-weight="600" letter-spacing="2" fill="#4A413B">MEASURED</text>
+      <text x="634" y="284" font-size="46" font-weight="600" fill="#191919">45</text>
+      <text x="634" y="310" font-size="15" fill="#4A413B">analyst articles and segments</text>
+      <text x="634" y="330" font-size="13" fill="#5D524B">Cloud Wars, 2021 to 2023</text>
+    </g>
+    <g>
+      <rect x="900" y="196" width="270" height="148" rx="16" fill="#FFFFFF" stroke="#E1DBC6"/>
+      <circle cx="929" cy="225" r="5" fill="#3D7FC4"/><text x="942" y="230" font-size="13" font-weight="600" letter-spacing="2" fill="#4A413B">STATED</text>
+      <text x="924" y="284" font-size="46" font-weight="600" fill="#191919">15</text>
+      <text x="924" y="310" font-size="15" fill="#4A413B">hospitals on his platform</text>
+      <text x="924" y="330" font-size="13" fill="#5D524B">In production 15+ years</text>
+    </g>
+  </g>
+</svg>
