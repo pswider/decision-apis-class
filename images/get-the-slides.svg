@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 168" width="1200" height="168" role="img" aria-labelledby="t d">
+  <title id="t">Get the slides</title>
+  <desc id="d">Download the PowerPoint deck for System One and Jev: Decision Models in Practice. 26 slides with speaker notes, from AI Community Conference Boston, November 13, 2026.</desc>
+  <defs>
+    <clipPath id="r"><rect width="1200" height="168" rx="22"/></clipPath>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="46"/></filter>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2B3542"/><stop offset="0.55" stop-color="#3A4757"/><stop offset="1" stop-color="#222A35"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#r)">
+    <rect width="1200" height="168" fill="url(#base)"/>
+    <g filter="url(#soft)">
+      <ellipse cx="820" cy="40" rx="260" ry="60" fill="#F2B56B" opacity="0.55" transform="rotate(-12 820 40)"/>
+      <ellipse cx="1120" cy="170" rx="200" ry="60" fill="#F7DFA8" opacity="0.45"/>
+      <ellipse cx="120" cy="190" rx="240" ry="70" fill="#9FB4C6" opacity="0.3"/>
+    </g>
+    <!-- slide icon -->
+    <g transform="translate(48 44)">
+      <rect width="116" height="80" rx="10" fill="#FAF8F3"/>
+      <rect x="14" y="14" width="52" height="8" rx="4" fill="#A76F3E"/>
+      <rect x="14" y="30" width="88" height="6" rx="3" fill="#E1DBC6"/>
+      <rect x="14" y="42" width="70" height="6" rx="3" fill="#E1DBC6"/>
+      <rect x="14" y="56" width="20" height="12" rx="3" fill="#1B8A6B"/>
+      <rect x="38" y="56" width="14" height="12" rx="3" fill="#BF7F17"/>
+      <rect x="56" y="56" width="24" height="12" rx="3" fill="#3D7FC4"/>
+      <rect x="84" y="56" width="10" height="12" rx="3" fill="#B8432F"/>
+    </g>
+    <text x="196" y="62" font-family="'Segoe Sans','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" letter-spacing="3.5" fill="#F7DFA8">THE SLIDES FROM THE CLASS</text>
+    <text x="196" y="100" font-family="'Segoe Serif',Georgia,'Times New Roman',serif" font-size="32" fill="#FFFFFF">System One and Jev: Decision Models in Practice</text>
+    <text x="196" y="130" font-family="'Segoe Sans','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="16" fill="#E8ECF0">26 slides with speaker notes. AI Community Conference Boston, November 13, 2026.</text>
+    <!-- button -->
+    <g transform="translate(934 56)">
+      <rect width="218" height="56" rx="28" fill="#F7DFA8"/>
+      <path d="M34 18 v16 m-7 -7 l7 7 l7 -7 M24 40 h20" fill="none" stroke="#191919" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="60" y="35" font-family="'Segoe Sans','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="18" font-weight="600" fill="#191919">Download .pptx</text>
+    </g>
+  </g>
+</svg>

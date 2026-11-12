@@ -1,4 +1,16 @@
 <p align="center">
+  <a href="https://github.com/pswider/decision-apis-class/raw/main/deck/System-One-and-Jev-AICO-Boston-2026.pptx"><img src="images/get-the-slides.svg" alt="Get the slides: System One and Jev, Decision Models in Practice. 26 slides with speaker notes. Download the PowerPoint file." width="100%"></a>
+</p>
+
+<p align="center">
+  <b><a href="https://github.com/pswider/decision-apis-class/raw/main/deck/System-One-and-Jev-AICO-Boston-2026.pptx">Download the PowerPoint (.pptx)</a></b>
+  &nbsp;·&nbsp;
+  <b><a href="deck/System-One-and-Jev-AICO-Boston-2026.pdf">View the slides in the browser (PDF)</a></b>
+  &nbsp;·&nbsp;
+  <a href="deck/">About the deck</a>
+</p>
+
+<p align="center">
   <img src="images/banner.svg" alt="Decision APIs in practice. A one hour masterclass on decision models: Jev, Microsoft-Decision-1 and Gemini Decision 1, and what happened when one of them scored a year of Medicare cost report coding." width="100%">
 </p>
 
@@ -85,6 +97,7 @@ coded to the right regulatory class.
 
 | For the presenter | |
 | --- | --- |
+| [Slide deck](deck/) | The 26 slides from AI Community Conference Boston, as PowerPoint and PDF, with speaker notes on every slide |
 | [Speaker and trainer](docs/speaker.md) | Who is teaching, with every number labeled measured, published or stated |
 | [Speaker notes](docs/speaker-notes.md) | Minute by minute talking points, and answers to the questions you will get |
 | [Examples](examples/) | A real Jev request and response, and the same question in Microsoft's and Google's shapes |
@@ -106,7 +119,8 @@ coded to the right regulatory class.
 | 0:54 | 6 | **Discussion and questions** | [Section 9](#9-questions-for-the-room) |
 
 Total 60 minutes. If you are running long, shorten the code tour to links 1,
-2, 3 and 5.
+2, 3 and 5. The [slide deck](deck/) carries a 50 minute version of the same
+plan, the length of the session at AI Community Conference Boston.
 
 ### The hook: three phrases
 
